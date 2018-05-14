@@ -15,16 +15,9 @@ import {
   SmallPara,
   HighlightedSection,
   HighlightedSectionContent,
+  WhiteBigPara,
 } from '../components'
 
-const WhiteBigPara = BigPara.extend`
-  color: #fefefe;
-  margin-bottom: 0;
-  margin-right: 3rem;
-
-  font-weight: 400;
-  line-height: 1.4;
-`
 const ScreensContainer = styled.div`
   align-self: flex-end;
   display: flex;

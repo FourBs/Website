@@ -13,6 +13,7 @@ import {
   SmallPara,
   HighlightedSection,
   HighlightedSectionContent,
+  WhiteBigPara,
 } from '../components'
 
 const UnderlinedStrong = Strong.extend`
@@ -33,7 +34,6 @@ const BigLink = styled(Link)`
   justify-content: center;
   padding: 1.6rem 3rem;
   margin-right: 3rem;
-  margin-bottom: 2rem;
   width: 70%;
 
   color: #020202;
@@ -64,8 +64,16 @@ const JoinUsContainer = styled.div`
   margin: 0 auto;
   width: 100%;
 `
-const SmallParaM = SmallPara.extend`
+const SmallParaM = WhiteBigPara.extend`
+  margin-bottom: 3rem;
+
+  text-align: center;
+  font-size: 1.23rem;
+  font-weight: 300;
   color: #ddd;
+`
+const StrongM = Strong.extend`
+  color: #fff;
 `
 
 const JoinUsPage = () => (
@@ -79,8 +87,8 @@ const JoinUsPage = () => (
     <HighlightedSection>
       <MaxWidth>
         <JoinUsContainer>
+          <SmallParaM>Join our platform to find the most interesting <StrongM>study and career options</StrongM> in your area. Get the <StrongM>support</StrongM> of your friends and join our community of <StrongM>students and experts</StrongM> in areas of your interest.</SmallParaM>
           <BigLink to='/'>Let your dreams grow with us →</BigLink>
-          <SmallParaM>Join our platform to find the most interesting study and career options in your area. Get the support of your friends and join our community of students and experts in areas of your interest.</SmallParaM>
         </JoinUsContainer>
       </MaxWidth>
     </HighlightedSection>

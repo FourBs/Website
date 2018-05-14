@@ -64,11 +64,20 @@ export const SmallPara = BigPara.extend`
 `
 
 export const HighlightedSection = styled.div`
-  padding: 3rem 0;
+  padding: 4rem 0;
 
   background: #020202;
 `
 
 export const HighlightedSectionContent = styled.div`
   display: flex;
+`
+
+export const WhiteBigPara = BigPara.extend`
+  color: #fefefe;
+  margin-bottom: 0;
+  margin-right: 3rem;
+
+  font-weight: 400;
+  line-height: 1.4;
 `
