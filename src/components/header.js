@@ -2,6 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import Link from 'gatsby-link'
 
+import LogoSrc from '../svg/logo.svg'
 import { MaxWidth } from './layout'
 
 const links = [
@@ -85,7 +86,7 @@ const Header = ({ siteTitle }) => (
     <MaxWidth>
       <LogoContainer>
         <Link to='/'>
-          <Logo src='/static/logo.svg' />
+          <Logo src={ LogoSrc } />
         </Link>
       </LogoContainer>
       <MainLinks>
