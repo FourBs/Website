@@ -2,6 +2,9 @@ import React from 'react'
 import styled from 'styled-components'
 import Link from 'gatsby-link'
 
+import AppScreen1 from '../images/app_screen_1.png'
+import AppScreen2 from '../images/app_screen_2.png'
+
 import {
   MaxWidth,
   TitleContainer,
@@ -27,14 +30,14 @@ const ScreensContainer = styled.div`
   display: flex;
   flex-direction: row;
 `
-const ScreenMock = styled.div`
+const ScreenMock = styled.img`
   width: 10rem;
   height: 16rem;
   margin-right: 3rem;
 
   background: #eee;
   border-radius: 10px;
-  box-shadow: 2px 2px 20px rgba(247, 241, 86, .4);
+  box-shadow: 2px 2px 20px rgba(255, 255, 255, .2);
 
   &:last-child {
     margin-right: 0;
@@ -82,8 +85,8 @@ const AboutUsPage = () => (
         <HighlightedSectionContent>
           <WhiteBigPara>Our personalized platform connects the curious and enthusiastic learners with the front runners in the local and national industry and education.</WhiteBigPara>
           <ScreensContainer>
-            <ScreenMock />
-            <ScreenMock />
+            <ScreenMock src={ AppScreen1 } />
+            <ScreenMock src={ AppScreen2 } />
           </ScreensContainer>
         </HighlightedSectionContent>
       </MaxWidth>
