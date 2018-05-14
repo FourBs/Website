@@ -59,7 +59,8 @@ const MainLinks = styled.ul`
 const MainLink = styled(Link).attrs({
   activeStyle: {
     boxShadow: 'inset 0 -12px 0 -6px rgba(246, 241, 87, 1)'
-  }
+  },
+  exact: true,
 })`
   display: inline-flex;
   align-items: center;
