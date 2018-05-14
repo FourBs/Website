@@ -50,7 +50,7 @@ const SectionSection = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 3rem 3rem;
+  padding: 5rem 3rem;
 
   border-right: 1px solid #ececeb;
 
