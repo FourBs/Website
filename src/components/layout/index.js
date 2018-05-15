@@ -64,6 +64,7 @@ export const SmallPara = BigPara.extend`
 `
 
 export const HighlightedSection = styled.div`
+  flex-grow: 1;
   padding: 4rem 0;
 
   background: #020202;
@@ -78,6 +79,18 @@ export const WhiteBigPara = BigPara.extend`
   margin-bottom: 0;
   margin-right: 3rem;
 
-  font-weight: 400;
-  line-height: 1.4;
+  line-height: 1.6;
+  font-size: 1.23rem;
+  font-weight: 300;
+  color: #ddd;
+  letter-spacing: .02rem;
+`
+
+export const StrongH = Strong.extend`
+  padding-bottom: 3px;
+
+  color: #fff;
+  font-weight: 500;
+
+  border-bottom: 3px solid #f7f156;
 `

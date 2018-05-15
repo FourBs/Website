@@ -99,14 +99,14 @@ const BigLink = styled(Link)`
 `
 
 const IndexPage = () => (
-  <div>
+  <div style={{ width: '100%' }}>
     <TreeSection key='tree'>
       <TreeImage src={ treeIllustration } />
       <ContentContainer>
         <Tagline>Let's grow together</Tagline>
         <ButtonContainer>
-          <BigLink to={ '/' }>Learners →</BigLink>
-          <BigLink to={ '/' }>Educators →</BigLink>
+          <BigLink to={ '/join-us' }>Learners →</BigLink>
+          <BigLink to={ '/partners' }>Educators →</BigLink>
         </ButtonContainer>
       </ContentContainer>
     </TreeSection>

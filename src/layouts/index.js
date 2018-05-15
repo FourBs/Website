@@ -7,12 +7,21 @@ import Header from '../components/header'
 import { MaxWidth } from '../components/layout'
 import './index.css'
 
+const Page = styled.div`
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  min-height: 100vh;
+`
 const Wrapper = styled.div`
+  flex-grow: 1;
+  display: flex;
+  align-items: stretch;
   margin-top: 3rem;
 `
 
 const Layout = ({ children, data }) => (
-  <div>
+  <Page>
     <Helmet
       title={data.site.siteMetadata.title}
       meta={[
@@ -24,9 +33,7 @@ const Layout = ({ children, data }) => (
     <Wrapper>
       { children() }
     </Wrapper>
-    <div>
-    </div>
-  </div>
+  </Page>
 )
 
 Layout.propTypes = {

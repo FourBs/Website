@@ -16,6 +16,7 @@ import {
   HighlightedSection,
   HighlightedSectionContent,
   WhiteBigPara,
+  StrongH,
 } from '../components'
 
 const ScreensContainer = styled.div`
@@ -67,7 +68,7 @@ const SmallTitle = styled.h3`
 `
 
 const AboutUsPage = () => (
-  <div>
+  <div style={{ width: '100%' }}>
     <MaxWidth>
       <TitleContainer>
         <BigTitle><Strong>Our mission</Strong> is to promote education and equality by improving study and work competencies in rural areas</BigTitle>
@@ -76,7 +77,7 @@ const AboutUsPage = () => (
     <HighlightedSection>
       <MaxWidth>
         <HighlightedSectionContent>
-          <WhiteBigPara>Our personalized platform connects the curious and enthusiastic learners with the front runners in the local and national industry and education.</WhiteBigPara>
+          <WhiteBigPara>Our personalized platform <StrongH>connects</StrongH> the curious and enthusiastic <StrongH>learners</StrongH> with the front runners in the local and <StrongH>national industry and education</StrongH>.</WhiteBigPara>
           <ScreensContainer>
             <ScreenMock src={ AppScreen1 } />
             <ScreenMock src={ AppScreen2 } />

@@ -14,6 +14,7 @@ import {
   HighlightedSection,
   HighlightedSectionContent,
   WhiteBigPara,
+  StrongH,
 } from '../components'
 
 const UnderlinedStrong = Strong.extend`
@@ -66,28 +67,34 @@ const JoinUsContainer = styled.div`
 `
 const SmallParaM = WhiteBigPara.extend`
   margin-bottom: 3rem;
+  margin-right: 0;
 
   text-align: center;
   font-size: 1.23rem;
   font-weight: 300;
   color: #ddd;
+  letter-spacing: .02rem;
 `
-const StrongM = Strong.extend`
-  color: #fff;
+const FourB = Strong.extend`
+  padding: .2rem .6rem;  
+
+  color: #f8f155;
+
+  background: #2b2b2b;
 `
 
 const JoinUsPage = () => (
-  <div>
+  <div style={{ width: '100%', display: 'flex', flexDirection: 'column', }}>
     <MaxWidth>
       <TitleContainer>
-        <BigTitle><Strong>Our four Bs</Strong></BigTitle>
-        <HeadlineCompanion>We give a chance to all children in rural areas to be <UnderlinedStrong>brave</UnderlinedStrong> enough to make a big step and to learn about the amazing powers of their <UnderlinedStrong>brain</UnderlinedStrong>. They will show us all how <UnderlinedStrong>brilliant</UnderlinedStrong> they are in what they are doing. Let them pursuit a better life, let them <UnderlinedStrong>be</UnderlinedStrong>!</HeadlineCompanion>
+        <BigTitle><FourB>Brave</FourB> <FourB>Brain</FourB> <FourB>Brilliant</FourB> <FourB>Be</FourB> (4B)</BigTitle>
+        <HeadlineCompanion><Strong>Our four Bs.</Strong> We give a chance to all children in rural areas to be <UnderlinedStrong>brave</UnderlinedStrong> enough to make a big step and to learn about the amazing powers of their <UnderlinedStrong>brain</UnderlinedStrong>. They will show us all how <UnderlinedStrong>brilliant</UnderlinedStrong> they are in what they are doing. Let them pursuit a better life, let them <UnderlinedStrong>be</UnderlinedStrong>!</HeadlineCompanion>
       </TitleContainer>
     </MaxWidth>
     <HighlightedSection>
       <MaxWidth>
         <JoinUsContainer>
-          <SmallParaM>Join our platform to find the most interesting <StrongM>study and career options</StrongM> in your area. Get the <StrongM>support</StrongM> of your friends and join our community of <StrongM>students and experts</StrongM> in areas of your interest.</SmallParaM>
+          <SmallParaM>Join our platform to find the most interesting <StrongH>study and career options</StrongH> in your area. Get the <StrongH>support</StrongH> of your friends and join our community of <StrongH>students and experts</StrongH> in areas of your interest.</SmallParaM>
           <BigLink to='/'>Let your dreams grow with us →</BigLink>
         </JoinUsContainer>
       </MaxWidth>

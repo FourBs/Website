@@ -12,7 +12,7 @@ import {
 } from '../components'
 
 const PartnersPage = () => (
-  <div>
+  <div style={{ width: '100%' }}>
     <MaxWidth>
       <TitleContainer>
         <BigTitle><Strong>Together we will grow</Strong></BigTitle>
