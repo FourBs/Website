@@ -20,7 +20,7 @@ const Wrapper = styled.div`
   margin-top: 3rem;
 `
 
-const Layout = ({ children, data }) => (
+const Layout = ({ children, data, location, }) => (
   <Page>
     <Helmet
       title={data.site.siteMetadata.title}
@@ -29,7 +29,7 @@ const Layout = ({ children, data }) => (
         { name: 'keywords', content: 'sample, something' },
       ]}
     />
-    <Header siteTitle={data.site.siteMetadata.title} />
+    <Header siteTitle={data.site.siteMetadata.title} location={ location } />
     <Wrapper>
       { children() }
     </Wrapper>

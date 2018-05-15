@@ -3,6 +3,7 @@ import styled from 'styled-components'
 import Link from 'gatsby-link'
 
 import LogoSrc from '../svg/logo.svg'
+import LogoISrc from '../svg/logo-i.svg'
 import { MaxWidth } from './layout'
 
 const links = [
@@ -34,8 +35,9 @@ const MainNavigation = styled.div`
   z-index: 2000;
   display: flex;
 
-  background: #fff;
-  box-shadow: 1px 0 0 1px rgba(0, 0, 0, .04);
+  background: ${ props =>  props.seeThrough ? '#000' : '#fff' };
+  box-shadow: 1px 0 0 1px ${ props =>  props.seeThrough ? 'rgba(255, 255, 255, .14)' : 'rgba(0, 0, 0, .04)' };
+  transition: all .2s ease-in;
 `
 const Logo = styled.img`
   height: 2.2rem;
@@ -72,7 +74,7 @@ const MainLink = styled(Link).attrs({
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   text-decoration: none;
   font-size: 18px;
-  color: #2b2b2b;
+  color: ${ props => props.seeThrough ? '#fff' : '#2b2b2b' };
   letter-spacing: .02rem;
 
   transition: all .1s ease-in;
@@ -82,17 +84,18 @@ const MainLink = styled(Link).attrs({
   }
 `
 
-const Header = ({ siteTitle }) => (
-  <MainNavigation>
+const Header = ({ siteTitle, location, }) => (
+  <MainNavigation seeThrough={ (location.pathname === '/') }>
+    { console.log(location) }
     <MaxWidth>
       <LogoContainer>
         <Link to='/'>
-          <Logo src={ LogoSrc } />
+          <Logo src={ (location.pathname === '/') ? LogoISrc : LogoSrc } />
         </Link>
       </LogoContainer>
       <MainLinks>
         { links.map(({ title, to }) => (
-          <MainLink key={ title } to={ to }>{ title }</MainLink>
+          <MainLink key={ title } to={ to } seeThrough={ (location.pathname === '/') }>{ title }</MainLink>
         )) }
       </MainLinks>
     </MaxWidth>

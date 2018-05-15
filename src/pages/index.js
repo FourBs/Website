@@ -6,6 +6,7 @@ import {
   BigTitle,
 } from '../components'
 import treeIllustration from '../svg/tree-illustration.svg'
+import honeycombPattern from '../images/honeycomb-pattern.png'
 
 const Section = styled.div`
   display: flex;
@@ -20,7 +21,10 @@ const TreeSection = Section.extend`
   margin-top: -3rem;
   height: calc(100% + 3rem);
 
-  background: #020202;
+  background-color: #020202;
+  /* background: url(${ honeycombPattern }) repeat;
+  background-size: 40px 40px;
+  background-opacity: .2; */
 `
 const TreeImage = styled.img`
   position: absolute;
@@ -129,7 +133,6 @@ const BigTitleM = BigTitle.extend`
 const IndexPage = () => (
   <div style={{ width: '100%' }}>
     <TreeSection key='tree'>
-      <TreeImage src={ treeIllustration } />
       <ContentContainer>
         <Tagline>Let's grow together</Tagline>
         <BigTitleM>Our platform connects learners with industry and education.</BigTitleM>

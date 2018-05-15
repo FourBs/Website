@@ -76,11 +76,12 @@ const SmallParaM = WhiteBigPara.extend`
   letter-spacing: .02rem;
 `
 const FourB = Strong.extend`
-  padding: .2rem .6rem;  
+  padding: .2rem 1rem;  
 
   color: #f8f155;
 
   background: #2b2b2b;
+  border-radius: 30px;
 `
 
 const JoinUsPage = () => (
