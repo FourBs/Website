@@ -12,8 +12,8 @@ const links = [
     to: '/'
   },
   {
-    title: 'Join us',
-    to: '/join-us'
+    title: 'Learners',
+    to: '/learners'
   },
   {
     title: 'About',
