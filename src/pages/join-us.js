@@ -88,7 +88,7 @@ const JoinUsPage = () => (
   <div style={{ width: '100%', display: 'flex', flexDirection: 'column', }}>
     <MaxWidth>
       <TitleContainer>
-        <BigTitle><FourB>Brave</FourB> <FourB>Brain</FourB> <FourB>Brilliant</FourB> <FourB>Be</FourB> (4B)</BigTitle>
+        <BigTitle><FourB>Brave</FourB> <FourB>Brain</FourB> <FourB>Brilliant</FourB> <FourB>Be</FourB></BigTitle>
         <HeadlineCompanion><Strong>Our four Bs.</Strong> We give a chance to all children in rural areas to be <UnderlinedStrong>brave</UnderlinedStrong> enough to make a big step and to learn about the amazing powers of their <UnderlinedStrong>brain</UnderlinedStrong>. They will show us all how <UnderlinedStrong>brilliant</UnderlinedStrong> they are in what they are doing. Let them pursuit a better life, let them <UnderlinedStrong>be</UnderlinedStrong>!</HeadlineCompanion>
       </TitleContainer>
     </MaxWidth>
