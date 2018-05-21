@@ -16,14 +16,13 @@ const links = [
     to: '/learners'
   },
   {
-    title: 'About',
-    to: '/about'
-  },
-  {
     title: 'Partners',
     to: '/partners'
   },
-
+  {
+    title: 'About',
+    to: '/about'
+  },
 ]
 
 const LogoContainer = styled.div`
