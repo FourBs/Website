@@ -31,7 +31,7 @@ const Box = styled.div`
   border-radius: 10px;
 `
 
-const BigLink = styled(Link)`
+export const BigLink = styled(Link)`
   display: flex;
   align-items: center;
   justify-content: center;
