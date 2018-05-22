@@ -16,8 +16,8 @@ const links = [
     to: '/learners'
   },
   {
-    title: 'Partners',
-    to: '/partners'
+    title: 'Collaborators',
+    to: '/collaborators'
   },
   {
     title: 'About',
@@ -85,7 +85,6 @@ const MainLink = styled(Link).attrs({
 
 const Header = ({ siteTitle, location, }) => (
   <MainNavigation seeThrough={ (location.pathname === '/') }>
-    { console.log(location) }
     <MaxWidth>
       <LogoContainer>
         <Link to='/'>
