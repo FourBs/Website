@@ -19,12 +19,12 @@ import {
   StrongH,
 } from '../components'
 
-const ScreensContainer = styled.div`
+export const ScreensContainer = styled.div`
   align-self: flex-end;
   display: flex;
   flex-direction: row;
 `
-const ScreenMock = styled.img`
+export const ScreenMock = styled.img`
   width: 10rem;
   height: 16rem;
   margin-right: 3rem;

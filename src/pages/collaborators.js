@@ -15,11 +15,15 @@ import {
   Step,
   SmallPara,
   WhiteBigPara,
+  StrongH,
 } from '../components'
 import { BigLink } from './learners'
+import { ScreensContainer, ScreenMock, } from './about'
 
 import UNICEFLogo from '../svg/UNICEF_Logo.png'
 import OECDLogo from '../svg/OECD_logo_new.svg'
+import AppScreen1 from '../images/app_screen_1.png'
+import AppScreen2 from '../images/app_screen_2.png'
 
 const Partners = styled.div`
   padding: 2rem 0 3rem;
@@ -181,7 +185,7 @@ const PlainStep = styled.li`
   }
 `
 const SmallParaMM = WhiteBigPara.extend`
-  margin-bottom: 4rem;
+  margin-top: 4rem;
   margin-right: 0;
 
   text-align: center;
@@ -260,9 +264,20 @@ const PartnersPage = () => (
     </WhiteSection>
     <HighlightedSection>
       <MaxWidth>
+        <HighlightedSectionContent>
+          <WhiteBigPara>Our personalized platform <StrongH>connects</StrongH> the curious and enthusiastic <StrongH>learners</StrongH> with the front runners in the local and <StrongH>national industry and education</StrongH>.</WhiteBigPara>
+          <ScreensContainer>
+            <ScreenMock src={ AppScreen1 } />
+            <ScreenMock src={ AppScreen2 } />
+          </ScreensContainer>
+        </HighlightedSectionContent>
+      </MaxWidth>
+    </HighlightedSection>
+    <HighlightedSection>
+      <MaxWidth>
         <CenterSection>
-          <SmallParaMM>Contact us for more information</SmallParaMM>
           <BigLink>Let's grow together →</BigLink>
+          <SmallParaMM>Contact us for more information</SmallParaMM>
         </CenterSection>
       </MaxWidth>
     </HighlightedSection>
