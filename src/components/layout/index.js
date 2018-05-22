@@ -94,3 +94,59 @@ export const StrongH = Strong.extend`
 
   border-bottom: 3px solid #f7f156;
 `
+
+export const Steps = styled.ol`
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin: 0 0 3rem;
+  padding: 0;
+  counter-reset: item;
+  list-style: none;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+`
+export const Step = styled.li`
+  display: flex;
+  align-items: center;
+  position: relative;
+  padding: 1rem 1.5rem;
+  padding-left: 4.5rem;
+  height: 2.6rem;
+  margin-bottom: 1.5rem;
+
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: #000;
+
+  counter-increment: item;
+  border-radius: 100px;
+  background: #f8f155;
+
+  &:before {
+    content: counter(item);
+    display: block;
+    position: absolute;
+    top: -.675rem;
+    left: -.3rem;
+    bottom: -.5rem;
+    width: 4rem;
+    height: 4rem;
+
+    font-size: 1.6rem;
+    font-weight: 700;
+    line-height: 3rem;
+    color: #000;
+    text-align: center;
+
+    border-radius: 100%;
+    background: #fff;
+    border: 0.5rem solid #000;
+  }
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+`

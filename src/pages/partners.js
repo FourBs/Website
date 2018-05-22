@@ -9,6 +9,12 @@ import {
   Strong,
   ContentContainer,
   BigPara,
+  HighlightedSection,
+  HighlightedSectionContent,
+  Steps,
+  Step,
+  SmallPara,
+  WhiteBigPara,
 } from '../components'
 
 import UNICEFLogo from '../svg/UNICEF_Logo.png'
@@ -53,20 +59,77 @@ const Logo = styled.div`
     margin-bottom: 0;
   }
 `
+const SectionWrapper = styled.div`
+  flex-grow: 1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+`
+const H2 = styled.h2`
+  margin-bottom: 0;
+
+  color: #fff;
+`
+const Column = styled.div`
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+`
+const SmallParaM = WhiteBigPara.extend`
+  margin-right: 0;
+
+  text-align: center;
+  font-size: 1.23rem;
+  font-weight: 600;
+  color: #000;
+  letter-spacing: .02rem;
+`
+const YellowSection = styled.div`
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+  padding: 4rem;
+
+  background: #f8f155;
+`
+const CenterSection = MaxWidth.extend`
+  justify-content: center;
+`
+const WhiteSection = styled.div`
+  background: #fff;
+`
+const StepM = Step.extend`
+  &:before {
+    content: '+';
+  }
+`
 
 const PartnersPage = () => (
   <div style={{ width: '100%' }}>
     <MaxWidth>
       <TitleContainer>
-        <BigTitle><Strong>Together</Strong> we will grow</BigTitle>
+        <BigTitle>Through our platform you can <Strong>reach new customers and partners</Strong> in a given location. By boosting the local economy <Strong>you profit and increase your influence</Strong>.</BigTitle>
       </TitleContainer>
     </MaxWidth>
-    <MaxWidth>
-      <ContentContainer>
-        <BigPara>We highly appreciate your commitment for your company and environment. We can help you to boost the growth of your company by finding the best suitable  co-workers. Your new co-workers will have exactly the skills needed thanks to your company´s participation in their education.</BigPara>
-        <BigPara alignSelf='flex-end'>Through our platform you can reach new customers and partners in a given location. By boosting the local economy you profit and increase your influence.</BigPara>
-      </ContentContainer>
-    </MaxWidth>
+    <HighlightedSection>
+      <MaxWidth>
+        <SectionWrapper>
+          <H2>Collaborator benefits</H2>
+          <Steps>
+            <StepM>Create a course content based on your expertise/needs.</StepM>
+            <StepM>Improve your public image.</StepM>
+            <StepM>Get connected with other companies in your area.</StepM>
+            <StepM>Hire applicants suitable for your company.</StepM>
+          </Steps>
+        </SectionWrapper>
+      </MaxWidth>
+    </HighlightedSection>
+    <YellowSection>
+      <CenterSection>
+        <SmallParaM>We can help you to boost the growth of your company by finding the better suitable co-workers. Your new workers will have the skills needed thanks to your company's participation in their education.</SmallParaM>
+      </CenterSection>
+    </YellowSection>
     <Partners>
       <MaxWidth flexDirection={ 'column' }>
         <H3>Partners</H3>
@@ -78,6 +141,17 @@ const PartnersPage = () => (
         </LogoRow>
       </MaxWidth>
     </Partners>
+    <WhiteSection>
+      <MaxWidth>
+        <div><BigTitle>Some <Strong>36% of children</Strong> don't continue after high-school in rural China</BigTitle></div>
+        <div></div>
+      </MaxWidth>
+    </WhiteSection>
+    <MaxWidth>
+      <TitleContainer>
+        <BigTitle><Strong>Together</Strong> we will grow</BigTitle>
+      </TitleContainer>
+    </MaxWidth>
   </div>
 )
 

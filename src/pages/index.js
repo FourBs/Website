@@ -137,7 +137,7 @@ const IndexPage = () => (
         <Tagline>Let's grow together</Tagline>
         <BigTitleM>Our platform connects learners with industry and education.</BigTitleM>
         <ButtonContainer>
-          <BigLink to={ '/join-us' }>Learners →</BigLink>
+          <BigLink to={ '/learners' }>Learners →</BigLink>
           <BigLink to={ '/partners' }>Educators →</BigLink>
         </ButtonContainer>
       </ContentContainer>

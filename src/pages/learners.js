@@ -15,6 +15,8 @@ import {
   HighlightedSectionContent,
   WhiteBigPara,
   StrongH,
+  Steps,
+  Step,
 } from '../components'
 
 const UnderlinedStrong = Strong.extend`
@@ -66,7 +68,7 @@ const JoinUsContainer = styled.div`
   width: 100%;
 `
 const SmallParaM = WhiteBigPara.extend`
-  margin-bottom: 3rem;
+  margin-bottom: 4rem;
   margin-right: 0;
 
   text-align: center;
@@ -81,20 +83,30 @@ const FourB = Strong.extend`
   color: #f8f155;
 
   background: #2b2b2b;
-  border-radius: 30px;
+`
+const Section = styled.div`
+  padding: 3rem 0;
+
+  background: #fff;
 `
 
 const JoinUsPage = () => (
   <div style={{ width: '100%', display: 'flex', flexDirection: 'column', }}>
     <MaxWidth>
       <TitleContainer>
-        <BigTitle><FourB>Brave</FourB> <FourB>Brain</FourB> <FourB>Brilliant</FourB> <FourB>Be</FourB></BigTitle>
+        <BigTitle><FourB>Brave</FourB><FourB>Brain</FourB><FourB>Brilliant</FourB><FourB>Be</FourB></BigTitle>
         <HeadlineCompanion><Strong>Our four Bs.</Strong> We give a chance to all children in rural areas to be <UnderlinedStrong>brave</UnderlinedStrong> enough to make a big step and to learn about the amazing powers of their <UnderlinedStrong>brain</UnderlinedStrong>. They will show us all how <UnderlinedStrong>brilliant</UnderlinedStrong> they are in what they are doing. Let them pursuit a better life, let them <UnderlinedStrong>be</UnderlinedStrong>!</HeadlineCompanion>
       </TitleContainer>
     </MaxWidth>
     <HighlightedSection>
       <MaxWidth>
         <JoinUsContainer>
+          <Steps>
+            <Step>Enroll to our interesting online and locally offered courses.</Step>
+            <Step>Get your certificates.</Step>
+            <Step>Connect with friends and study together.</Step>
+            <Step>Find a job you like!</Step>
+          </Steps>
           <SmallParaM>Join our platform to find the most interesting <StrongH>study and career options</StrongH> in your area. Get the <StrongH>support</StrongH> of your friends and join our community of <StrongH>students and experts</StrongH> in areas of your interest.</SmallParaM>
           <BigLink to='/'>Let your dreams grow with us →</BigLink>
         </JoinUsContainer>
